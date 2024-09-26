@@ -1,0 +1,14 @@
+[Unit]
+Description=Poweredge Fan Control
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=fanctl
+Restart=always
+RestartSec=10
+Environment="CONFIG_PATH=/home/ubuntu/fanctl-config.yaml"
+Environment="LOG_LEVEL=info"
+
+[Install]
+WantedBy=default.target

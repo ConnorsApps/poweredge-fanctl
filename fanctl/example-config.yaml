@@ -1,0 +1,6 @@
+idrac:
+  host: idrac.site.com
+  user: root
+  password: root
+
+# ipmitool -I lanplus -H idrac.site.com -U root -P root sensor list

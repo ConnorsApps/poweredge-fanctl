@@ -44,12 +44,12 @@ type CPU struct {
 
 func NewCPU() *CPU {
 	return &CPU{
-		minSpeed: 15,
+		minSpeed: 10,
 		maxSpeed: 80,
 		tempPerSpeed: [][]float64{
-			{40, 15},
-			{45, 30},
-			{50, 80},
+			{45, 15},
+			{50, 30},
+			{55, 80},
 		},
 	}
 }
@@ -66,12 +66,12 @@ type GPU struct {
 
 func NewGPU() *GPU {
 	return &GPU{
-		minSpeed: 15,
+		minSpeed: 10,
 		maxSpeed: 80,
 		tempPerSpeed: [][]float64{
-			{40, 15},
-			{45, 40},
-			{50, 70},
+			{45, 15},
+			{50, 40},
+			{55, 70},
 			{60, 100},
 		},
 	}

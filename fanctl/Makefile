@@ -1,8 +1,9 @@
 
-GOARCH ?= "amd64"
-GOOS ?= "linux"
+GOOS := linux
+GOARCH := amd64
 
-.PHONEY: fanctl
+.PHONY: build
 build:
 	@echo "Building..."
-	go build -o fanctl .
+	GOOS=$(GOOS) GOARCH=$(GOARCH) go build \
+		-o fanctl .
